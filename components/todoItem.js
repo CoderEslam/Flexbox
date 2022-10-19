@@ -1,10 +1,14 @@
 import {StatusBar} from 'expo-status-bar';
 import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useState} from "react";
+import {MaterialIcons} from '@expo/vector-icons'
 
 export default function TodoItem({index, pressHandler} /* like constructor */) {
     return (<TouchableOpacity onPress={() => pressHandler(index.key)}>
-            <Text style={styles.item}>{index.text}</Text>
+            <View style={styles.item}>
+                <MaterialIcons name={'delete'} size={18} color={'#333'} />
+                <Text style={styles.itemText}>{index.text}</Text>
+            </View>
         </TouchableOpacity>
     )
 }
@@ -16,6 +20,9 @@ const styles = StyleSheet.create({
         borderColor: '#bbb',
         borderWidth: 1,
         borderStyle: 'dashed',
-        borderRadius: 10
+        borderRadius: 10,
+        flexDirection: 'row'
+    }, itemText: {
+        marginLeft: 10,
     }
 })

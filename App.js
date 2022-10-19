@@ -66,11 +66,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     }, content: {
         padding: 40,
-        backgroundColor:'#e1550a',
-        flex:1
+        backgroundColor: '#e1550a',
+        flex: 1,
     }, list: {
         marginTop: 20,
-        backgroundColor:'rgb(172,66,7)',
-        flex:1,
+        backgroundColor: 'rgb(172,66,7)',
+        flex: 1,
     }
 });
